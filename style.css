@@ -2,12 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     width: 544px;
-    background-color: gray;
+    border: 10px solid black;
 }
 
 .square{
     width: 30px;
     height: 30px;
     margin: 2px;
-    background-color: antiquewhite;
 }
