@@ -3,12 +3,47 @@
     flex-wrap: wrap;
     width: 800px;
     height: 800px;
-    border: 10px solid black;
+    border: 10px solid #f8cb72;
+    background-color: lightgray;
 }
 
 .square{
     width: 30px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid white;
     box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #729ff8;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 800px;
+    padding: 10px;
+    background-color: #f8cb72;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.grid,
+.erase,
+.rainbow,
+.chooseColor{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: lightgray;
+    font-size: medium;
 }
