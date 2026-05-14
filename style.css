@@ -16,6 +16,7 @@
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -46,4 +47,23 @@ body{
     border-radius: 10px;
     background-color: lightgray;
     font-size: medium;
+    font-family: Free Sans;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.title{
+    display: flex;
+    width: 600px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    background-color: #f8cb72;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: Free Sans;
+    font-weight: bold;
 }

@@ -1,21 +1,37 @@
+const title = document.createElement("header");
+title.classList.add("title");
+document.body.appendChild(title);
+title.textContent = 'ETCH - A - SKETCH';
+
+const wrapper = document.createElement("div");
+wrapper.classList.add("wrapper");
+document.body.appendChild(wrapper);
+
+const menu = document.querySelector(".menu");
+wrapper.appendChild(menu);
+
 const grid = document.createElement("button");
 grid.classList.add("grid");
-document.body.appendChild(grid);
+menu.appendChild(grid);
 grid.textContent = "Grid Size";
 
 const erase = document.createElement("button");
 erase.classList.add("erase");
-document.body.appendChild(erase);
+menu.appendChild(erase);
 erase.textContent = "Erase";
 
 const rainbow = document.createElement("button");
 rainbow.classList.add("rainbow");
-document.body.appendChild(rainbow);
+menu.appendChild(rainbow);
 rainbow.textContent = "Rainbow";
+
+const chooseColor = document.createElement("input");
+chooseColor.type = "color";
+menu.appendChild(chooseColor);
 
 const container = document.createElement("div");
 container.classList.add("container");
-document.body.appendChild(container);
+wrapper.appendChild(container);
 
 let colorful = false;
 
@@ -43,6 +59,12 @@ rainbow.addEventListener("click", () => {
     colorful = true;
 });
 
+let color = '#f8729f';
+chooseColor.addEventListener("input", (e) => {
+    color = e.target.value;
+    colorful = false;
+});
+
 function createGrid(size){
     container.innerHTML = "";
 
@@ -56,7 +78,7 @@ function createGrid(size){
                 square.style.backgroundColor = randomColor();
             }
             else{
-                square.style.backgroundColor = 'blue';
+                square.style.backgroundColor = color;
             }
         });
         square.style.width = `${800 / size}px`;
